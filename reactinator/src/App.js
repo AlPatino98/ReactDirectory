@@ -3,6 +3,7 @@ import EmployeeCard from "./components/EmployeeCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import employees from "./employees.json";
+import FilterButton from "./components/FilterButton";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -21,6 +22,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+        <FilterButton/>
         <Title>Employee List</Title>
         {this.state.employees.map(employee => (
           <EmployeeCard
